@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN"><!--<![endif]--><head>
+
+
+
+</head>
+
+<body data-rsssl="1" class="page-template-default page page-id-4087 wp-embed-responsive sidebar">
+
+<p>
+<script language="javascript" type="text/javascript" src="./test/p5.js"></script>
+<script language="javascript" src="./test/p5.sound.js"></script>
+<script language="javascript" type="text/javascript" src="./test/sketch_test2.js"></script>
+<script language="javascript" type="text/javascript" src="./test/pitch_data.js"></script>
+<script language="javascript" type="text/javascript" src="./test/equal_loud.js"></script><br>
+<script type="text/javascript" src="./test/jquery.js"></script>
+</p>
+
+<a href="./test/test.mp3">testmp3</a>
+<!-- <embed id='mp3' height="100" width="200" src="./test/test.mp3" autostart=false /> -->
+
+<script type="text/javascript">
+window.onload = function() {
+    <!-- var embed = document.querySelector('embed') -->
+    <!-- var d = embed.src -->
+    <!-- console.log(d) -->
+}
+</script>
+
+<div id="input_pane">
+<span id="mic_icon" class="on"><img src="./test/mic.png" alt="点击暂停／继续"></span>
+<div id="audio_pane">或本地文件：<br>
+<audio id="myAudio" controls="controls"><source type="audio/mpeg">你的浏览器太老了！推荐使用Chrome或Firefox。</audio><br>
+<input id="audio_file" type="file"></div>
+</div>
+<div id="pitch_pane">
+<div><strong>系统检测当前音高为：<span id="pitch_name">Ab4</span></strong></div>
+<div><strong>系统认定你的声音为：<span id="pitch_pure">混声</span></strong></div>
+</div>
+<div id="range_pane"><span>点击显示音域：</span><span id="man_high" class="on">男高音</span><span id="man_low">男低音</span><span id="woman_high">女高音</span><span id="woman_low">女低音</span></div>
+<div id="draw_pane">
+</div>
+</div>
+
+<pre><code class="language-javascript">
+Your code here!
+</code></pre>
+
+    <!-- <script type="text/javascript"> -->
+        <!-- soundManager.useFlashBlock = true; // optional - if used, required flashblock.css -->
+        <!-- soundManager.url = 'https://bideyuanli.com/wp-content/plugins/compact-wp-audio-player/swf/soundmanager2.swf'; -->
+        <!-- function play_mp3(flg, ids, mp3url, volume, loops) -->
+        <!-- { -->
+            <!-- //Check the file URL parameter value -->
+            <!-- var pieces = mp3url.split("|"); -->
+            <!-- if (pieces.length > 1) {//We have got an .ogg file too -->
+                <!-- mp3file = pieces[0]; -->
+                <!-- oggfile = pieces[1]; -->
+                <!-- //set the file URL to be an array with the mp3 and ogg file -->
+                <!-- mp3url = new Array(mp3file, oggfile); -->
+            <!-- } -->
+
+            <!-- soundManager.createSound({ -->
+                <!-- id: 'btnplay_' + ids, -->
+                <!-- volume: volume, -->
+                <!-- url: mp3url -->
+            <!-- }); -->
+
+            <!-- if (flg == 'play') { -->
+    <!-- stop_all_tracks();                soundManager.play('btnplay_' + ids, { -->
+                    <!-- onfinish: function() { -->
+                        <!-- if (loops == 'true') { -->
+                            <!-- loopSound('btnplay_' + ids); -->
+                        <!-- } -->
+                        <!-- else { -->
+                            <!-- document.getElementById('btnplay_' + ids).style.display = 'inline'; -->
+                            <!-- document.getElementById('btnstop_' + ids).style.display = 'none'; -->
+                        <!-- } -->
+                    <!-- } -->
+                <!-- }); -->
+            <!-- } -->
+            <!-- else if (flg == 'stop') { -->
+    <!-- //soundManager.stop('btnplay_'+ids); -->
+                <!-- soundManager.pause('btnplay_' + ids); -->
+            <!-- } -->
+        <!-- } -->
+        <!-- function show_hide(flag, ids) -->
+        <!-- { -->
+            <!-- if (flag == 'play') { -->
+                <!-- document.getElementById('btnplay_' + ids).style.display = 'none'; -->
+                <!-- document.getElementById('btnstop_' + ids).style.display = 'inline'; -->
+            <!-- } -->
+            <!-- else if (flag == 'stop') { -->
+                <!-- document.getElementById('btnplay_' + ids).style.display = 'inline'; -->
+                <!-- document.getElementById('btnstop_' + ids).style.display = 'none'; -->
+            <!-- } -->
+        <!-- } -->
+        <!-- function loopSound(soundID) -->
+        <!-- { -->
+            <!-- window.setTimeout(function() { -->
+                <!-- soundManager.play(soundID, {onfinish: function() { -->
+                        <!-- loopSound(soundID); -->
+                    <!-- }}); -->
+            <!-- }, 1); -->
+        <!-- } -->
+        <!-- function stop_all_tracks() -->
+        <!-- { -->
+            <!-- soundManager.stopAll(); -->
+            <!-- var inputs = document.getElementsByTagName("input"); -->
+            <!-- for (var i = 0; i < inputs.length; i++) { -->
+                <!-- if (inputs[i].id.indexOf("btnplay_") == 0) { -->
+                    <!-- inputs[i].style.display = 'inline';//Toggle the play button -->
+                <!-- } -->
+                <!-- if (inputs[i].id.indexOf("btnstop_") == 0) { -->
+                    <!-- inputs[i].style.display = 'none';//Hide the stop button -->
+                <!-- } -->
+            <!-- } -->
+        <!-- } -->
+    <!-- </script> -->
+
+</body></html>
