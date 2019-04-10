@@ -1,8 +1,8 @@
 function preload(){
-  sound = loadSound('test.mp3');//ok需开启www服务，用浏览器打开网页http://localhost/bideyuanli_test.html，而不是打开文件
-  //sound = loadSound('xiaoyao1.mp3');//ok
-  // sound = loadSound('erquanyingyue.mp3'); //error
-  // sound = loadSound('erquan_part_d.mp3'); //error
+  //需开启www服务，用浏览器打开网页http://localhost/bideyuanli_test.html，而不是打开文件
+  //sound = loadSound('test.mp3');sound = loadSound('../res/test.mp3');//ok
+  //sound = loadSound('erquanyingyue.mp3'); //error
+  sound = loadSound('../res/erquan_part_s.mp3'); //error
 }
 
 
