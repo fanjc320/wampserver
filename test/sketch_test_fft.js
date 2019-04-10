@@ -1,6 +1,6 @@
 function preload(){
-  //sound = loadSound('test.mp3');//ok需开启www服务，用浏览器打开网页http://localhost/bideyuanli_test.html，而不是打开文件
-  sound = loadSound('xiaoyao1.mp3');//ok
+  sound = loadSound('test.mp3');//ok需开启www服务，用浏览器打开网页http://localhost/bideyuanli_test.html，而不是打开文件
+  //sound = loadSound('xiaoyao1.mp3');//ok
   // sound = loadSound('erquanyingyue.mp3'); //error
   // sound = loadSound('erquan_part_d.mp3'); //error
 }
@@ -16,9 +16,9 @@ function setup(){
 var Flag=0;
 
 function draw(){
-	sleep(2000);
+	// sleep(2000);
   background(0);
-
+  var flag_log =0;
   var spectrum = fft.analyze();
   noStroke();
   fill(0,255,0); // spectrum is green
@@ -28,8 +28,9 @@ function draw(){
     var h = -height + map(spectrum[i], 0, 255, height, 0);
     //rect(x, height, width / spectrum.length, h )
 	rect(x, 0, width / spectrum.length, h )
-	if(Flag==0){
-		console.log(spectrum[i])
+	if(Flag==0 && sound.isPlaying() ){//首次播放的时候的频谱打印出来
+		console.log(i,spectrum[i])
+		flag_log = 1;
 	}
   }
 
@@ -46,8 +47,9 @@ function draw(){
   endShape();
 
   text('click to play/pause', 4, 10);
-  
-  Flag=Flag+1;
+  if(flag_log==1){
+	Flag=1;
+  }
 }
 
 // fade sound if mouse is over canvas
